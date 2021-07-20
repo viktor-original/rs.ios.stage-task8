@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0To-Jd-gMs">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Artist View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ArtistViewController" title="Artist View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqU-YE-eeJ" customClass="ControlButton">
+                                <rect key="frame" x="20" y="506" width="151" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="N88-IG-rQE"/>
+                                    <constraint firstAttribute="width" constant="151" id="a46-Ka-lZy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
+                                <state key="normal" title="Open Timer">
+                                    <color key="titleColor" name="Light Green Sea"/>
+                                </state>
+                                <connections>
+                                    <action selector="openTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rGi-pw-43K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7PX-VX-ezH" customClass="ControlButton">
+                                <rect key="frame" x="239" y="506" width="95" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="676-8S-MSl"/>
+                                    <constraint firstAttribute="width" constant="95" id="b91-AY-Pax"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" name="Light Green Sea"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ly6-Z8-UJf" customClass="ControlButton">
+                                <rect key="frame" x="243" y="434" width="91" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Svl-Qd-jeH"/>
+                                    <constraint firstAttribute="width" constant="91" id="qAB-Vm-HrM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
+                                <state key="normal" title="Draw">
+                                    <color key="titleColor" name="Light Green Sea"/>
+                                </state>
+                                <connections>
+                                    <action selector="performDrawing:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cqz-p4-7oG"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEm-Wf-sfF">
+                                <rect key="frame" x="38" y="84" width="300" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="3Pz-M9-6lp"/>
+                                    <constraint firstAttribute="width" constant="300" id="PvI-4u-Mg2"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVh-rZ-SU8" customClass="ControlButton">
+                                <rect key="frame" x="20" y="434" width="163" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="163" id="8rf-aZ-WRe"/>
+                                    <constraint firstAttribute="height" constant="32" id="BDW-u2-CJZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
+                                <state key="normal" title="Open Palette">
+                                    <color key="titleColor" name="Light Green Sea"/>
+                                </state>
+                                <connections>
+                                    <action selector="openPalette:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ke7-Rz-SyT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7PX-VX-ezH" secondAttribute="trailing" constant="41" id="1a3-jU-OKF"/>
+                            <constraint firstItem="ZEm-Wf-sfF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="L6O-0n-Cyv"/>
+                            <constraint firstItem="ly6-Z8-UJf" firstAttribute="top" secondItem="ZEm-Wf-sfF" secondAttribute="bottom" constant="50" id="SUY-qO-sya"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ly6-Z8-UJf" secondAttribute="trailing" constant="41" id="VN7-HC-gCf"/>
+                            <constraint firstItem="HVh-rZ-SU8" firstAttribute="top" secondItem="ZEm-Wf-sfF" secondAttribute="bottom" constant="50" id="cGU-Ig-Swr"/>
+                            <constraint firstItem="ZEm-Wf-sfF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="iaC-kb-yJK"/>
+                            <constraint firstItem="MqU-YE-eeJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="itv-s8-Pkz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7PX-VX-ezH" secondAttribute="bottom" constant="129" id="lEi-nw-EXX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZEm-Wf-sfF" secondAttribute="trailing" constant="37" id="nmn-9d-kv2"/>
+                            <constraint firstItem="HVh-rZ-SU8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="oD6-wT-EMW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MqU-YE-eeJ" secondAttribute="bottom" constant="129" id="pR4-zE-H9v"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Artist" id="lpd-wS-Zcg">
+                        <barButtonItem key="rightBarButtonItem" title="Drawings" id="5Wu-XG-YZR" customClass="BarButton">
+                            <connections>
+                                <segue destination="pMw-Gr-dY7" kind="show" id="eMQ-fi-gr8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="drawButton" destination="ly6-Z8-UJf" id="7hH-i8-qlk"/>
+                        <outlet property="drawingsButton" destination="5Wu-XG-YZR" id="aFU-9a-Om9"/>
+                        <outlet property="paletteButton" destination="HVh-rZ-SU8" id="hUc-1J-c7K"/>
+                        <outlet property="shareButton" destination="7PX-VX-ezH" id="i0D-iE-xFd"/>
+                        <outlet property="timerButton" destination="MqU-YE-eeJ" id="1r3-Lz-7Xh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-34055.199999999997" y="-15439.430284857572"/>
+        </scene>
+        <!--PaletteVC-->
+        <scene sceneID="kj9-IR-TBR">
+            <objects>
+                <viewController storyboardIdentifier="PaletteVC" title="PaletteVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RUF-KU-KZI" customClass="PaletteViewController" customModule="RSSchool_T8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a1n-La-bpM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEa-u6-1g6">
+                                <rect key="frame" x="250" y="20" width="85" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="20U-Ls-NgT"/>
+                                    <constraint firstAttribute="height" constant="32" id="4dq-lY-puP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" name="Light Green Sea"/>
+                                </state>
+                                <connections>
+                                    <action selector="savePaletteButton:" destination="RUF-KU-KZI" eventType="touchUpInside" id="BxI-WD-3Ze"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5ny-Sn-iuC">
+                                <rect key="frame" x="17" y="144" width="340" height="80"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IrH-iU-Ynj">
+                                        <rect key="frame" x="0.0" y="0.0" width="340" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQo-aW-Ul6" customClass="ColorControlButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="g4N-BO-nmt"/>
+                                                    <constraint firstAttribute="height" constant="40" id="tGb-XY-4xH"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                        <color key="value" name="Red"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8k-9c-9Hl" customClass="ColorControlButton">
+                                                <rect key="frame" x="50" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="2ui-Mz-otJ"/>
+                                                    <constraint firstAttribute="width" constant="40" id="6mn-id-k41"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                        <color key="value" name="Blue"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Nf-M7-RID" customClass="ColorControlButton">
+                                                <rect key="frame" x="100" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="bVk-Zv-tQ6"/>
+                                                    <constraint firstAttribute="height" constant="40" id="tip-jR-g4Z"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                        <color key="value" name="Light Green Sea"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3KR-5d-2pC" customClass="ColorControlButton">
+                                                <rect key="frame" x="150" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="oLN-bp-gym"/>
+                                                    <constraint firstAttribute="width" constant="40" id="x4j-6l-dWi"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                        <color key="value" name="Gray"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcc-LV-vFn" customClass="ColorControlButton">
+                                                <rect key="frame" x="200" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="Gto-oU-CF3"/>
+                                                    <constraint firstAttribute="height" constant="40" id="QGU-d0-Lkt"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                        <color key="value" name="purple"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htT-1b-0Rt" customClass="ColorControlButton">
+                                                <rect key="frame" x="250" y="0.0" width="90" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="F2j-qc-YO4"/>
+                                                    <constraint firstAttribute="height" constant="40" id="p1C-aS-nCM"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                        <color key="value" name="Red"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="9Nf-M7-RID" firstAttribute="leading" secondItem="m8k-9c-9Hl" secondAttribute="trailing" constant="15" id="8MN-Ta-w5f"/>
+                                            <constraint firstAttribute="width" constant="340" id="CAJ-Hp-Spb"/>
+                                            <constraint firstItem="3KR-5d-2pC" firstAttribute="leading" secondItem="9Nf-M7-RID" secondAttribute="trailing" constant="10" id="CEX-7X-iWX"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RuJ-GF-4CJ">
+                                        <rect key="frame" x="0.0" y="40" width="340" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2c-hh-uAm" customClass="ColorControlButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="bB1-2g-kX6"/>
+                                                    <constraint firstAttribute="width" constant="40" id="tjF-om-weJ"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                        <color key="value" name="Yellow"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Exa-E7-zs7" customClass="ColorControlButton">
+                                                <rect key="frame" x="50" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="oLB-ij-bw2"/>
+                                                    <constraint firstAttribute="height" constant="40" id="thm-jL-DEe"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                        <color key="value" name="Teal"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGM-md-kym" customClass="ColorControlButton">
+                                                <rect key="frame" x="100" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="bbE-Vb-sv9"/>
+                                                    <constraint firstAttribute="height" constant="40" id="evM-8c-8Hn"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                        <color key="value" name="Pink"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NG1-iC-uci" customClass="ColorControlButton">
+                                                <rect key="frame" x="150" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Htj-yU-Wjp"/>
+                                                    <constraint firstAttribute="width" constant="40" id="Qhh-xf-Fhe"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                        <color key="value" name="Bog"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QlE-rP-m6N" customClass="ColorControlButton">
+                                                <rect key="frame" x="200" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="3T3-6V-qnU"/>
+                                                    <constraint firstAttribute="width" constant="40" id="4ta-Kb-OTb"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                        <color key="value" name="Green"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzT-db-9T5" customClass="ColorControlButton">
+                                                <rect key="frame" x="250" y="0.0" width="90" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="S5X-6u-1GL"/>
+                                                    <constraint firstAttribute="height" constant="40" id="gjV-GX-CzP"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                        <color key="value" name="Red"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="340" id="Bep-NJ-FiF"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="340" id="NID-CU-xjS"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wW1-w5-2aX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AEa-u6-1g6" firstAttribute="top" secondItem="wW1-w5-2aX" secondAttribute="top" constant="20" id="5QE-Nc-aTk"/>
+                            <constraint firstItem="5ny-Sn-iuC" firstAttribute="top" secondItem="AEa-u6-1g6" secondAttribute="bottom" constant="92" id="RaA-JF-88i"/>
+                            <constraint firstItem="5ny-Sn-iuC" firstAttribute="leading" secondItem="wW1-w5-2aX" secondAttribute="leading" constant="17" id="gCF-RX-MW1"/>
+                            <constraint firstItem="wW1-w5-2aX" firstAttribute="trailing" secondItem="5ny-Sn-iuC" secondAttribute="trailing" constant="18" id="rnX-5p-MeW"/>
+                            <constraint firstItem="wW1-w5-2aX" firstAttribute="trailing" secondItem="AEa-u6-1g6" secondAttribute="trailing" constant="40" id="uh0-Jk-87w"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="53i-5M-KjO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-34434.400000000001" y="-14717.091454272864"/>
+        </scene>
+        <!--TimerVC-->
+        <scene sceneID="Jap-g2-550">
+            <objects>
+                <viewController storyboardIdentifier="Timer" title="TimerVC" id="kkJ-8H-YwI" customClass="TimerViewController" customModule="RSSchool_T8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U2m-Sd-Dd5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghM-s0-DPf">
+                                <rect key="frame" x="250" y="20" width="85" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="650-kF-l8K"/>
+                                    <constraint firstAttribute="width" constant="85" id="EP6-mI-xbn"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="SVc-bn-QD5"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="yyO-Kt-vTS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" name="Light Green Sea"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="kkJ-8H-YwI" eventType="touchUpInside" id="ntK-Za-5aM"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="PuS-xM-7Xq">
+                                <rect key="frame" x="72" y="98" width="227" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2eL-2B-JU7"/>
+                                    <constraint firstAttribute="width" constant="223" id="JE7-Qe-nZT"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="timeSliderChanged:" destination="kkJ-8H-YwI" eventType="valueChanged" id="4WS-FS-55s"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kY9-v8-i4D">
+                                <rect key="frame" x="26" y="103" width="7" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="7" id="Q8E-eL-VxV"/>
+                                    <constraint firstAttribute="height" constant="22" id="lgK-8o-pVH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWb-hI-udx">
+                                <rect key="frame" x="338" y="103" width="11" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="11" id="7gy-1g-odD"/>
+                                    <constraint firstAttribute="height" constant="22" id="Zgu-4T-kBK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.4 s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxm-Ef-1QX">
+                                <rect key="frame" x="162" y="168" width="52" height="21"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pEN-1E-0ne"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PuS-xM-7Xq" firstAttribute="leading" secondItem="kY9-v8-i4D" secondAttribute="trailing" constant="41" id="Fjo-zv-W2c"/>
+                            <constraint firstItem="PuS-xM-7Xq" firstAttribute="top" secondItem="ghM-s0-DPf" secondAttribute="bottom" constant="46" id="GD2-ej-cae"/>
+                            <constraint firstItem="xxm-Ef-1QX" firstAttribute="leading" secondItem="pEN-1E-0ne" secondAttribute="leading" constant="162" id="Lp4-hy-L1t"/>
+                            <constraint firstItem="pEN-1E-0ne" firstAttribute="trailing" secondItem="DWb-hI-udx" secondAttribute="trailing" constant="26" id="MRm-Yb-JtZ"/>
+                            <constraint firstItem="DWb-hI-udx" firstAttribute="top" secondItem="pEN-1E-0ne" secondAttribute="top" constant="103" id="bvy-Y0-7zh"/>
+                            <constraint firstItem="kY9-v8-i4D" firstAttribute="leading" secondItem="pEN-1E-0ne" secondAttribute="leading" constant="26" id="gJn-yi-SDm"/>
+                            <constraint firstItem="pEN-1E-0ne" firstAttribute="trailing" secondItem="ghM-s0-DPf" secondAttribute="trailing" constant="40" id="gOg-62-PZe"/>
+                            <constraint firstItem="DWb-hI-udx" firstAttribute="leading" secondItem="PuS-xM-7Xq" secondAttribute="trailing" constant="41" id="hhH-8z-wtR"/>
+                            <constraint firstItem="kY9-v8-i4D" firstAttribute="top" secondItem="pEN-1E-0ne" secondAttribute="top" constant="103" id="qfq-Bd-v9r"/>
+                            <constraint firstItem="xxm-Ef-1QX" firstAttribute="top" secondItem="PuS-xM-7Xq" secondAttribute="bottom" constant="40" id="rg1-oR-8MP"/>
+                            <constraint firstItem="ghM-s0-DPf" firstAttribute="top" secondItem="pEN-1E-0ne" secondAttribute="top" constant="20" id="tHJ-4h-7xm"/>
+                            <constraint firstItem="pEN-1E-0ne" firstAttribute="trailing" secondItem="xxm-Ef-1QX" secondAttribute="trailing" constant="161" id="vr1-kU-yb9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="timeSlider" destination="PuS-xM-7Xq" id="EsA-ae-TIi"/>
+                        <outlet property="timerLabel" destination="xxm-Ef-1QX" id="Duy-G0-qi9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SwU-TJ-2LG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-33518" y="-14717"/>
+        </scene>
+        <!--Drawings-->
+        <scene sceneID="k01-Ry-HCr">
+            <objects>
+                <viewController storyboardIdentifier="DrawingsViewController" title="Drawings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pMw-Gr-dY7" customClass="DrawingsViewController" customModule="RSSchool_T8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="DrawingsViewController" id="PWt-NU-kU2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ms-SX-OXT" customClass="ControlButton">
+                                <rect key="frame" x="88" y="113" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="U1N-dt-Dzc"/>
+                                    <constraint firstAttribute="width" constant="200" id="h6v-9N-gro"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
+                                <state key="normal" title="Planet">
+                                    <color key="titleColor" name="Light Green Sea"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDo-Hb-5Xb" customClass="ControlButton">
+                                <rect key="frame" x="88" y="168" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="M5q-iA-hbG"/>
+                                    <constraint firstAttribute="width" constant="200" id="f6t-hN-boU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
+                                <state key="normal" title="Head">
+                                    <color key="titleColor" name="Light Green Sea"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcB-6o-1vM" customClass="ControlButton">
+                                <rect key="frame" x="88" y="223" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="dMX-Z5-bPU"/>
+                                    <constraint firstAttribute="height" constant="40" id="lTN-hl-kYA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
+                                <state key="normal" title="Tree">
+                                    <color key="titleColor" name="Light Green Sea"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vlg-dk-FZS" customClass="ControlButton">
+                                <rect key="frame" x="88" y="278" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="KP5-dE-H3L"/>
+                                    <constraint firstAttribute="width" constant="200" id="Ri9-ph-8Ek"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="mYH-po-xbq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
+                                <state key="normal" title="Landscape">
+                                    <color key="titleColor" name="Light Green Sea"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QgV-wA-wZp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vlg-dk-FZS" firstAttribute="leading" secondItem="QgV-wA-wZp" secondAttribute="leading" constant="88" id="6fD-72-pKr"/>
+                            <constraint firstItem="Vlg-dk-FZS" firstAttribute="top" secondItem="GcB-6o-1vM" secondAttribute="bottom" constant="15" id="BXF-bd-tWS"/>
+                            <constraint firstItem="QgV-wA-wZp" firstAttribute="trailing" secondItem="GcB-6o-1vM" secondAttribute="trailing" constant="87" id="P4Q-i7-LKc"/>
+                            <constraint firstItem="2ms-SX-OXT" firstAttribute="top" secondItem="QgV-wA-wZp" secondAttribute="top" constant="69" id="RtH-2h-KCU"/>
+                            <constraint firstItem="QDo-Hb-5Xb" firstAttribute="leading" secondItem="QgV-wA-wZp" secondAttribute="leading" constant="88" id="UzI-bV-wQw"/>
+                            <constraint firstItem="QgV-wA-wZp" firstAttribute="trailing" secondItem="QDo-Hb-5Xb" secondAttribute="trailing" constant="87" id="ZCv-Sx-jvh"/>
+                            <constraint firstItem="GcB-6o-1vM" firstAttribute="top" secondItem="QDo-Hb-5Xb" secondAttribute="bottom" constant="15" id="cml-kY-9LY"/>
+                            <constraint firstItem="2ms-SX-OXT" firstAttribute="leading" secondItem="QgV-wA-wZp" secondAttribute="leading" constant="88" id="gKw-wU-9HZ"/>
+                            <constraint firstItem="GcB-6o-1vM" firstAttribute="leading" secondItem="QgV-wA-wZp" secondAttribute="leading" constant="88" id="gSK-yX-0nj"/>
+                            <constraint firstItem="Vlg-dk-FZS" firstAttribute="top" secondItem="GcB-6o-1vM" secondAttribute="bottom" constant="15" id="jDa-U6-ej9"/>
+                            <constraint firstItem="QgV-wA-wZp" firstAttribute="trailing" secondItem="Vlg-dk-FZS" secondAttribute="trailing" constant="87" id="mkw-9N-Co6"/>
+                            <constraint firstItem="QgV-wA-wZp" firstAttribute="trailing" secondItem="2ms-SX-OXT" secondAttribute="trailing" constant="87" id="s8b-K9-MZP"/>
+                            <constraint firstItem="QDo-Hb-5Xb" firstAttribute="top" secondItem="2ms-SX-OXT" secondAttribute="bottom" constant="15" id="sk2-07-ybQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Drawings" id="7VK-K4-FLf">
+                        <barButtonItem key="backBarButtonItem" title="Artist" id="VUF-2A-C5C"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="headButton" destination="QDo-Hb-5Xb" id="XG9-4e-2ip"/>
+                        <outlet property="landscapeButton" destination="Vlg-dk-FZS" id="fPm-HC-Hzf"/>
+                        <outlet property="planetButton" destination="2ms-SX-OXT" id="i0I-LI-ZRn"/>
+                        <outlet property="treeButton" destination="GcB-6o-1vM" id="3RC-C3-14N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nFS-nR-qaU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-33152.800000000003" y="-15439.430284857572"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WfP-te-3hf">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="0To-Jd-gMs" customClass="NavigationController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aaq-Xr-RCu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hXU-bd-P7R"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MSc-Az-UqF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-34953" y="-15439"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="3KR-5d-2pC">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="9Nf-M7-RID">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="Exa-E7-zs7">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="NG1-iC-uci">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="QlE-rP-m6N">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="UQo-aW-Ul6">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="Y2c-hh-uAm">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="dcc-LV-vFn">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="htT-1b-0Rt">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="m8k-9c-9Hl">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="vGM-md-kym">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="yzT-db-9T5">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="Blue">
+            <color red="0.24313725490196078" green="0.090196078431372548" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Bog">
+            <color red="0.054901960784313725" green="0.21568627450980393" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Gray">
+            <color red="0.50199997425079346" green="0.50199997425079346" blue="0.50199997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Green">
+            <color red="0.0" green="0.48627450980392156" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Light Green Sea">
+            <color red="0.1289999932050705" green="0.68999999761581421" blue="0.55699998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Pink">
+            <color red="1" green="0.46666666666666667" blue="0.63529411764705879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Red">
+            <color red="0.88627450980392153" green="0.10588235294117647" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Teal">
+            <color red="0.0" green="0.68235294117647061" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Yellow">
+            <color red="1" green="0.67843137254901964" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="purple">
+            <color red="0.61568627450980395" green="0.36862745098039218" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
